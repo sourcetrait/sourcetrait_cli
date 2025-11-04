@@ -1,17 +1,9 @@
-SourceTrait CLI
+SrcTrait
 ================================================================================
-[![License Badge]][License]
+[![Crate Badge]][Crate] [![License Badge]][License]
+[![Docs Badge]][Docs] [![Changes Badge]][Changes]
 
-*Command-line interface for SourceTrait tools*
-
-
-Crates
---------------------------------------------------------------------------------
-
-### [SrcTrait](./crates/srctrait)
-[![SrcTrait Crate Badge]][SrcTrait Crate] [![Docs Badge]][SrcTrait Docs]
-
-*Modular command-line interface for SourceTrait projects*
+*Command-line interface for the SourceTrait tools*
 
 
 Repository
@@ -31,7 +23,7 @@ all copyright covering your contribution.
 
 License (AGPL3)
 --------------------------------------------------------------------------------
-SourceTrait CLI: Command-line interface for SourceTrait tools  
+SrcTrait: Command-line interface for the SourceTrait tools  
 Developed by [SourceTrait](https://sourcetrait.com), a division of **Asmov LLC**  
 Copyright (C) 2025 [Asmov LLC](https://asmov.software)  
 
@@ -49,11 +41,13 @@ You should have received a [copy](./LICENSE-AGPL-3.txt) of the
 GNU Affero General Public License along with this program.
 If not, see https://www.gnu.org/licenses/.
 
+
+
+[Crate]: https://crates.io/crates/srctrait
+[Crate Badge]: https://img.shields.io/crates/v/srctrait.svg
+[Docs]: https://docs.rs/srctrait
 [Docs Badge]: https://img.shields.io/badge/docs-blue
 [License]: #License-AGPL3
 [License Badge]: https://img.shields.io/badge/license-AGPL3-blue.svg
-
-[SrcTrait Crate]: https://crates.io/crates/srctrait
-[SrcTrait Crate Badge]: https://img.shields.io/crates/v/srctrait.svg
-[SrcTrait Docs]: https://docs.rs/srctrait
-
+[Changes]: ./docs/CHANGES.md
+[Changes Badge]: https://img.shields.io/badge/changes-blue
