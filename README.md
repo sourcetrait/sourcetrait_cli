@@ -8,8 +8,8 @@ SourceTrait CLI
 Crates
 --------------------------------------------------------------------------------
 
-### [SrcTrait](./crates/srctrait)
-[![SrcTrait Crate Badge]][SrcTrait Crate] [![Docs Badge]][SrcTrait Docs]
+### [SourceTrait CLI](./crates/sourcetrait_cli)
+[![SourceTrait CLI Crate Badge]][SourceTrait CLI Crate] [![Docs Badge]][SourceTrait CLI Docs]
 
 *Modular command-line interface for SourceTrait projects*
 
@@ -53,7 +53,7 @@ If not, see https://www.gnu.org/licenses/.
 [License]: #License-AGPL3
 [License Badge]: https://img.shields.io/badge/license-AGPL3-blue.svg
 
-[SrcTrait Crate]: https://crates.io/crates/srctrait
-[SrcTrait Crate Badge]: https://img.shields.io/crates/v/srctrait.svg
-[SrcTrait Docs]: https://docs.rs/srctrait
+[SrcTrait Crate]: https://crates.io/crates/sourcetrait_clit
+[SrcTrait Crate Badge]: https://img.shields.io/crates/v/sourcetrait_cli.svg
+[SrcTrait Docs]: https://docs.rs/sourcetrait_cli
 
