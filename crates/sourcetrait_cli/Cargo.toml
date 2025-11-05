@@ -1,6 +1,6 @@
 [package]
-name = "srctrait"
-version = "1.1.1"
+name = "sourcetrait_cli"
+version = "1.2.1"
 edition = "2024"
 description = "Command-line interface for SourceTrait tools"
 authors = ["SourceTrait <development@sourcetrait.com>"]
@@ -9,6 +9,10 @@ repository = "https://github.com/sourcetrait/sourcetrait_cli"
 homepage = "https://sourcetrait.com"
 categories = ["command-line-utilities"]
 keywords = ["sourcetrait", "cli", "srctrait"]
+
+[[bin]]
+path = "src/main.rs"
+name = "srctrait"
 
 [dependencies]
 anyhow.workspace = true
