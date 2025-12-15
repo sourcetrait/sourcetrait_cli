@@ -2,7 +2,89 @@ SourceTrait CLI
 ================================================================================
 [![License Badge]][License]
 
-*Command-line interface for SourceTrait tools*
+*Command-line interface for the SourceTrait productivity suite*
+
+Products
+--------------------------------------------------------------------------------
+
+The **SourceTrait** productivity suite is comprised of three core products:
+- [SourceTrait Backup](#SourceTrait-Backup)
+- [SourceTrait Filer](#SourceTrait-Filer)
+- [SourceTrait Sync](#SourceTrait-Sync)
+
+### SourceTrait Backup
+--------------------------------------------------------------------------------
+**SourceTrait Backup** is a rotational backup system for workstation users.
+
+It allows easy access to previous backups on the system to quickly restore lost work.
+
+Full backups are typically ran monthly and incremental backups (changes only) are typically ran daily. Users can customize scheduling.
+
+Backups can be configured to be zipped, encrypted, and securely synchronized across multiple devices and cloud storage providers.
+
+There is no vendor lock-in; The reliable rsync backup tool is used internally and the same can be used manually if necessary.
+
+
+### SourceTrait Filer
+**SourceTrait Filer** is a novel method of record-keeping using existing filesystem tools.
+
+It assists users in filing consistently, according to their own rules, which in turn allows the entire directory structure to be reliably cross-referencable.
+
+Files can be maintained entirely offline, self-hosted over a company network, or through a cloud service.
+
+There is no vendor lock-in; No special tools are required to access anything.
+
+### SourceTrait Sync 
+**SourceTrait Sync** is a portable file synchronization system that maintains a
+user's important files in a standardized way across multiple operating systems.
+
+It is essentially a unified repository that synchronizes the configuration of other
+repositories. It supports Git and SourceTrait Filer across any service provider.
+All files are categorized by the [SourceTrait Who](#SourceTrait-Who)
+standard.
+
+Each of the user's repositories are stored in a standard way within their home
+directory. The user can then configure symbolic links (shortcuts) for easy access,
+which is automatically replicated to any other operating system that they
+use.
+
+Standards
+--------------------------------------------------------------------------------
+
+### Operating Systems 
+### Cross-Platform
+We provide shell scripting for:
+- `nu` via [nushell](https://www.nushell.sh)
+
+We provide development packaging for:
+- `cargo` via [Rust](https://rust-lang.org/tools/install)
+
+#### Linux
+We provide packaging for:
+- `apt` and `dpkg` via `.deb` packages 
+- `dnf`, `yum`, and `rpm` via `.rpm` packages
+
+#### MacOS
+We provide packaging for:
+- `brew` via [Homebrew](https://brew.sh) formulas
+
+#### Windows
+We provide packaging for:
+- `choco` via [Chocolatey](https://chocolatey.org/install) packages
+
+### SourceTrait Who
+**SourceTrait Who** is a standard used across our suite that allow users
+to operate under multiple roles on a single system.
+
+We all wear a many hats. This is how SourceTrait classifes them ...
+
+#### Identities and Roles
+- **At** (*org*): The user's identity within an organization (typical work role)
+  - `/at/(org)/`
+- **As** (*alias*): The user's aliases and specialized roles (hobby accounts, admin roles, etc.)
+  - `/as/(alias)/` or `/as/(org)/(role)/`
+- **Me**: The user's personal identity
+  - `/me/`
 
 
 Crates
