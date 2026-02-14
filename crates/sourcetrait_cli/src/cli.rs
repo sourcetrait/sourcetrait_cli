@@ -11,4 +11,5 @@ pub(crate) struct SrcTraitCli {
 #[derive(Debug, clap::Subcommand)]
 pub(crate) enum SrcTraitCommand {
     Note(note::cli::NoteCommand),
+    Box(sandbox::cli::BoxCommand),
 }

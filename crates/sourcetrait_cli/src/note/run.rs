@@ -1,4 +1,4 @@
-use crate::*;
+use crate::note::*;
 
 pub(crate) fn run_cmd(cmd: NoteCommand) -> anyhow::Result<()> {
     match cmd.command {

@@ -17,5 +17,6 @@ fn run_cli() -> anyhow::Result<()> {
     let cli = SrcTraitCli::parse();
     match cli.command {
         SrcTraitCommand::Note(note_cmd) => note::run::run_cmd(note_cmd),
+        SrcTraitCommand::Box(box_cmd) => sandbox::run::run_cmd(box_cmd),
     }
 }
