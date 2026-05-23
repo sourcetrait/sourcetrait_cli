@@ -4,9 +4,9 @@ pub(crate) fn run_cmd(cmd: BoxCommand) -> anyhow::Result<()> {
     match cmd.command {
         BoxSubcommand::Pull(cmd) => run_pull(cmd),
         BoxSubcommand::Shell(cmd) => run_shell(cmd),
-        BoxSubcommand::Start(cmd) => todo!(),
-        BoxSubcommand::Stop(cmd) => todo!(),
-        BoxSubcommand::Refresh(cmd) => todo!(),
+        BoxSubcommand::Start(_cmd) => todo!(),
+        BoxSubcommand::Stop(_cmd) => todo!(),
+        BoxSubcommand::Refresh(_cmd) => todo!(),
     }
 }
 
