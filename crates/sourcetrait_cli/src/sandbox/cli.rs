@@ -10,12 +10,11 @@ pub(crate) struct BoxCommand {
 #[derive(Debug, clap::Subcommand)]
 pub(crate) enum BoxSubcommand {
     Pull(PullCommand),
-    #[clap(alias = "sh")]
-    Shell(ShellCommand),
     Start(StartCommand),
+    Ssh(SshCommand),
     Stop(StopCommand),
-    #[clap(alias = "re")]
     Refresh(RefreshCommand),
+    Running(RunningCommand),
 }
 
 /// Downloads a sandbox image
@@ -27,9 +26,18 @@ pub(crate) struct PullCommand {
     pub(crate) name: Option<String>,
 }
 
-/// Shells into a container, starting it if necessary
+/// Is the machine or a specific container running?
 #[derive(Debug, clap::Parser)]
-pub(crate) struct ShellCommand {
+pub(crate) struct RunningCommand {
+    /// Container name or "machine"
+    pub(crate) name: String,
+}
+
+impl RunningCommand { pub(crate) const MACHINE: &'static str = "machine"; }
+
+/// SSHs into a container, starting it if necessary
+#[derive(Debug, clap::Parser)]
+pub(crate) struct SshCommand {
     /// Container name
     pub(crate) name: String,
 }
