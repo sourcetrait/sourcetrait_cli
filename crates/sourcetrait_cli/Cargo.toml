@@ -1,6 +1,6 @@
 [package]
 name = "sourcetrait_cli"
-version = "2.1.0"
+version = "0.0.1"
 edition = "2024"
 description = "Command-line interface for SourceTrait tools"
 authors = ["SourceTrait <development@sourcetrait.com>"]

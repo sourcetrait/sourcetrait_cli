@@ -2,19 +2,21 @@
 
 /// Sandboxed command-line environments for data analytics scripting
 #[derive(Debug, clap::Parser)]
-pub(crate) struct BoxCommand {
+pub(crate) struct BoxCmd {
     #[clap(subcommand)]
-    pub(crate) command: BoxSubcommand,
+    pub(crate) command: BoxCommand,
 }
 
 #[derive(Debug, clap::Subcommand)]
-pub(crate) enum BoxSubcommand {
+pub(crate) enum BoxCommand {
     Pull(PullCommand),
     Start(StartCommand),
     Ssh(SshCommand),
     Stop(StopCommand),
     Refresh(RefreshCommand),
     Running(RunningCommand),
+    #[clap(subcommand)]
+    Machine(MachineSubcommand),
 }
 
 /// Downloads a sandbox image
@@ -26,20 +28,18 @@ pub(crate) struct PullCommand {
     pub(crate) name: Option<String>,
 }
 
-/// Is the machine or a specific container running?
+/// Is a container running?
 #[derive(Debug, clap::Parser)]
 pub(crate) struct RunningCommand {
-    /// Container name or "machine"
+    /// Container name
     pub(crate) name: String,
 }
-
-impl RunningCommand { pub(crate) const MACHINE: &'static str = "machine"; }
 
 /// SSHs into a container, starting it if necessary
 #[derive(Debug, clap::Parser)]
 pub(crate) struct SshCommand {
     /// Container name
-    pub(crate) name: String,
+    pub(crate) container: String,
 }
 
 /// Starts a container 
@@ -61,4 +61,10 @@ pub(crate) struct StopCommand {
 pub(crate) struct RefreshCommand {
     /// Container name
     pub(crate) name: String,
+}
+
+/// Manages the podman machine
+#[derive(Debug, clap::Subcommand)]
+pub(crate) enum MachineSubcommand {
+    Running,
 }
