@@ -13,10 +13,11 @@ pub fn run() -> ExitCode {
     }
 }
 
-fn run_cli() -> anyhow::Result<()> {
+fn run_cli() -> CliResult<()> {
     let cli = SrcTraitCli::parse();
     match cli.command {
-        SrcTraitCommand::Note(note_cmd) => note::run::run_cmd(note_cmd),
+        SrcTraitCommand::Note(_note_cmd) => todo!("refactor note"),
+        //SrcTraitCommand::Note(note_cmd) => note::run::run_cmd(note_cmd),
         SrcTraitCommand::Box(box_cmd) => sandbox::run::run_cmd(box_cmd),
     }
 }
