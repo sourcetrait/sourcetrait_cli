@@ -5,19 +5,17 @@ members = [
 ]
 
 [workspace.dependencies]
-anyhow = { version = "1" }
 clap = { version = "4", features = ["derive"] }
 chrono = { version = "0.4" }
-#todo: heck
-convert_case = { version = "0.8" }
 derive_builder = { version = "0.20" }
 dirs = { version = "6" }
+hek = { version = "0.5" }
 shellexpand = { version = "3", features = ["path"] }
 serde = { version = "1", features = ["derive"] }
 sourcetrait_chronox = { version = "1" }
 sourcetrait_clapx = { version = "1" }
-sourcetrait_lib_note = { version = "3" }
-sourcetrait_lib_box = { path = "../sourcetrait_lib/crates/sourcetrait_lib_box" }
+sourcetrait_lib_note = { path = "../sourcetrait_lib/crates/sourcetrait_lib_note" }
+sourcetrait_lib_sandbox = { path = "../sourcetrait_lib/crates/sourcetrait_lib_sandbox" }
 sourcetrait_stdx = { version = "1" }
 sourcetrait_testing = { version = "4" }
 sourcetrait_tomlx = { version = "3" }
