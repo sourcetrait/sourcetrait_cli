@@ -35,29 +35,29 @@ pub(crate) fn run_ssh(cmd: SshCommand) -> CliResult<()> {
     
 }
 
-pub(crate) fn run_start(cmd: StartCommand) -> CliResult<> {
+pub(crate) fn run_start(cmd: StartCommand) -> CliResult<()> {
     let opts = lib_sandbox::StartOptions { name: cmd.name };
     lib_sandbox::start(opts)
-        .map_err(|e| anyhow::anyhow!("Failed to start container"))
+        .with_whatever_context(|_| "Failed to start container")
 }
 
-pub(crate) fn run_running(cmd: RunningCommand) -> anyhow::Result<()> {
+pub(crate) fn run_running(cmd: RunningCommand) -> CliResult<()> {
     let opts = lib_sandbox::IsRunningOptions::Container { name: cmd.name };
     match lib_sandbox::is_running(opts) {
         Ok(is_running) => {
             println!("{is_running}");
             Ok(())
         },
-        Err(e) => Err(anyhow::anyhow!("Failed to inspect podman :: {e}")),
+        Err(e) => snafu::whatever!("Failed to inspect podman :: {e}"),
     }
 }
 
-pub(crate) fn run_machine_running() -> anyhow::Result<()> {
+pub(crate) fn run_machine_running() -> CliResult<()> {
     match lib_sandbox::is_running(lib_sandbox::IsRunningOptions::Machine) {
         Ok(is_running) => {
             println!("{is_running}");
             Ok(())
         },
-        Err(e) => Err(anyhow::anyhow!("Failed to inspect podman :: {e}")),
+        Err(e) => snafu::whatever!("Failed to inspect podman :: {e}"),
     }
 }

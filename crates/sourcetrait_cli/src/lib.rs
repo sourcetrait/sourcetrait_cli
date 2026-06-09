@@ -18,7 +18,6 @@ pub(crate) use std::{
     process::{Command, ExitCode, Stdio},
 };
 
-pub(crate) use anyhow::Context;
 pub(crate) use snafu::Error;
 pub(crate) use clap::Parser;
 pub(crate) use sourcetrait_lib_note as lib;

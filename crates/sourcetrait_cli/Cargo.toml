@@ -15,10 +15,8 @@ path = "src/main.rs"
 name = "srctrait"
 
 [dependencies]
-anyhow.workspace = true
 chrono.workspace = true
 clap.workspace = true
-convert_case.workspace = true
 derive_builder.workspace = true
 dirs.workspace = true
 serde.workspace = true
